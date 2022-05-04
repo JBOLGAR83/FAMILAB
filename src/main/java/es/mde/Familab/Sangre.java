@@ -1,18 +1,9 @@
 package es.mde.Familab;
 
-public class SangreImpl extends Analitica implements Sangre {
+public class Sangre extends Analitica {
 
-	private Sala_Extraccion sala_Extraccion;
 	private Float colesterol;
 	private Float urea;
-
-	public Sala_Extraccion getSala_Extraccion() {
-		return sala_Extraccion;
-	}
-
-	public void setSala_Extraccion(Sala_Extraccion sala_Extraccion) {
-		this.sala_Extraccion = sala_Extraccion;
-	}
 
 	public Float getColesterol() {
 		return colesterol;
@@ -28,12 +19,6 @@ public class SangreImpl extends Analitica implements Sangre {
 
 	public void setUrea(Float urea) {
 		this.urea = urea;
-	}
-
-	@Override
-	public String addSalaExtraccionSangre(Sala_Extraccion sala_Extraccion) {
-		setSala_Extraccion(sala_Extraccion);
-		return "Lugar de la extraccion: " + sala_Extraccion;
 	}
 
 }

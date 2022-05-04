@@ -1,18 +1,9 @@
 package es.mde.Familab;
 
-public class OrinaImpl extends Analitica implements Orina {
+public class Orina extends Analitica {
 
-	private PuntoEntrega puntoDeEntrega;
 	private Float densidad;
 	private Float ph;
-
-	public PuntoEntrega getPuntoDeEntrega() {
-		return puntoDeEntrega;
-	}
-
-	public void setPuntoDeEntrega(PuntoEntrega puntoDeEntrega) {
-		this.puntoDeEntrega = puntoDeEntrega;
-	}
 
 	public Float getDensidad() {
 		return densidad;
@@ -29,13 +20,5 @@ public class OrinaImpl extends Analitica implements Orina {
 	public void setPh(Float ph) {
 		this.ph = ph;
 	}
-
-	@Override
-	public String addPuntoEntregaMuestra(PuntoEntrega puntoEntrega) {
-		setPuntoDeEntrega(puntoEntrega);
-		return "Entregado en: " + getPuntoDeEntrega();
-	}
-	
-	
 
 }

@@ -3,28 +3,44 @@
  *
  * This generated file contains a sample Java application project to get you started.
  * For more details take a look at the 'Building Java & JVM projects' chapter in the Gradle
- * User Manual available at https://docs.gradle.org/7.3/userguide/building_java_projects.html
+ * User Manual available at https://docs.gradle.org/7.3.3/userguide/building_java_projects.html
  */
 
 plugins {
-    // Apply the application plugin to add support for building a CLI application in Java.
-    id 'application'
+    id 'java'
+    id 'java-library'
+    id 'eclipse'
 }
 
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
 repositories {
-    // Use Maven Central for resolving dependencies.
+    jcenter()
+
+    maven { url 'https://jitpack.io' }
+
     mavenCentral()
 }
 
 dependencies {
-    // Use JUnit test framework.
-    testImplementation 'junit:junit:4.13.2'
-
-    // This dependency is used by the application.
-    implementation 'com.google.guava:guava:30.1.1-jre'
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.2.2'
+    
+	api 'com.github.LanyuEStudio:lanyuCommon:v1.0.0'
 }
 
-application {
-    // Define the main class for the application.
-    mainClass = 'es.mde.Familab.App'
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
 }
