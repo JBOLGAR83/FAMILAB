@@ -1,24 +1,13 @@
-package es.mde.Familab;
+package es.mde.familab;
 
-public class Sangre extends Analitica {
+public interface Sangre {
 
-	private Float colesterol;
-	private Float urea;
+	public float getColesterol();
+	
+	public float getUrea();
 
-	public Float getColesterol() {
-		return colesterol;
-	}
-
-	public void setColesterol(Float colesterol) {
-		this.colesterol = colesterol;
-	}
-
-	public Float getUrea() {
-		return urea;
-	}
-
-	public void setUrea(Float urea) {
-		this.urea = urea;
-	}
-
+	public void setColesterol(float colesterol);
+	
+	public void setUrea(float urea);
+	
 }

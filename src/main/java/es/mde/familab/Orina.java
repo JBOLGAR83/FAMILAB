@@ -1,24 +1,13 @@
-package es.mde.Familab;
+package es.mde.familab;
 
-public class Orina extends Analitica {
+public interface Orina {
 
-	private Float densidad;
-	private Float ph;
+	public float getDensidad();
 
-	public Float getDensidad() {
-		return densidad;
-	}
+	public float getPh();
 
-	public void setDensidad(Float densidad) {
-		this.densidad = densidad;
-	}
+	public void setDensidad(float densidad);
 
-	public Float getPh() {
-		return ph;
-	}
-
-	public void setPh(Float ph) {
-		this.ph = ph;
-	}
+	public void setPh(float ph);
 
 }

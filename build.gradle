@@ -26,8 +26,7 @@ repositories {
 dependencies {
     // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
 	implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.2.2'
-    
-	api 'com.github.LanyuEStudio:lanyuCommon:v1.0.0'
+	
 }
 
 task sourcesJar(type: Jar, dependsOn: classes) {
