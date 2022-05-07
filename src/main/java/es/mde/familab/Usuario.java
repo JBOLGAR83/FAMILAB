@@ -1,6 +1,7 @@
 package es.mde.familab;
 
 import java.time.LocalDate;
+import java.util.Collection;
 import java.util.List;
 
 public class Usuario {
@@ -8,7 +9,7 @@ public class Usuario {
 	private int dni;
 	private String nombre;
 	private LocalDate fechaNacimiento;
-	private List<Analitica>analiticas;
+	private Collection<Analitica> analiticas;
 
 	public int getDni() {
 		return dni;
@@ -34,11 +35,11 @@ public class Usuario {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 
-	public List<Analitica> getAnaliticas() {
+	public Collection<Analitica> getAnaliticas() {
 		return analiticas;
 	}
 
-	public void setAnaliticas(List<Analitica> analiticas) {
+	public void setAnaliticas(Collection<Analitica> analiticas) {
 		this.analiticas = analiticas;
 	}
 
@@ -54,6 +55,8 @@ public class Usuario {
 		this.analiticas = analiticas;
 	}
 
-	
+	public void addElemento(Analitica analitica) {
+		getAnaliticas().add(analitica);
+	}
 
 }
