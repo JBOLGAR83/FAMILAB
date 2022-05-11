@@ -10,7 +10,7 @@ public class Usuario {
 	private int dni;
 	private String nombre;
 	private LocalDate fechaNacimiento;
-	private Collection<Analitica> analiticas= new ArrayList<>();
+
 
 	public int getDni() {
 		return dni;
@@ -36,28 +36,20 @@ public class Usuario {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 
-	public Collection<Analitica> getAnaliticas() {
-		return analiticas;
-	}
 
-	public void setAnaliticas(Collection<Analitica> analiticas) {
-		this.analiticas = analiticas;
-	}
+	public Usuario() {}
 
-	public Usuario() {
-
-	}
-
-	public Usuario(int dni, String nombre, LocalDate fechaNacimiento, List<Analitica> analiticas) {
-		super();
+	public Usuario(int dni, String nombre, LocalDate fechaNacimiento) {
 		this.dni = dni;
 		this.nombre = nombre;
 		this.fechaNacimiento = fechaNacimiento;
-		this.analiticas = analiticas;
 	}
 
-	public void addElemento(Analitica analitica) {
-		getAnaliticas().add(analitica);
+	@Override
+	public String toString() {
+		return "Usuario: " + getNombre() + " con DNI: "+ getDni();
 	}
+	
+	
 
 }

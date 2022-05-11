@@ -23,12 +23,9 @@ public abstract class Analitica {
 		this.fechaMuestra = fechaMuestra;
 	}
 
-	public Analitica() {
-	}
+	public Analitica() {};
 
-	public Analitica(Long id, LocalDate fechaMuestra) {
-		super();
-		this.id = id;
+	public Analitica(LocalDate fechaMuestra) {
 		this.fechaMuestra = fechaMuestra;
 	}
 

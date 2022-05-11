@@ -1,38 +1,42 @@
 package es.mde.familab;
 
-public class SangreImpl extends Analitica implements Sangre {
+import java.time.LocalDate;
+
+public class SangreImpl extends Analitica {
 
 	private float colesterol;
 	private float urea;
 
-	@Override
 	public float getUrea() {
 		return this.urea;
 	}
 
-	@Override
 	public float getColesterol() {
 		return this.colesterol;
 	}
 
-	@Override
 	public void setColesterol(float colesterol) {
 
 	}
 
-	@Override
 	public void setUrea(float urea) {
 
 	}
 
 	public SangreImpl() {
-	}
+	};
 
-	public SangreImpl(float colesterol, float urea) {
-		super();
+	public SangreImpl(LocalDate fechaMuestra, float colesterol, float urea) {
+		super(fechaMuestra);
 		this.colesterol = colesterol;
 		this.urea = urea;
 
 	}
+
+	@Override
+	public String toString() {
+		return "Analítica de Sangre: FECHA MUESTRA: " + getFechaMuestra()+ " COLESTEROL = " + getColesterol() + " UREA = "+ getUrea();
+	}
+	
 
 }
