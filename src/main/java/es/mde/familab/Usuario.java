@@ -10,7 +10,7 @@ public class Usuario {
 	private int dni;
 	private String nombre;
 	private LocalDate fechaNacimiento;
-	private Collection<Analitica> analiticas= new ArrayList<Analitica>();
+	private Collection<Analitica> analiticas= new ArrayList<>();
 
 	public int getDni() {
 		return dni;
